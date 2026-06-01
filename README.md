@@ -1,6 +1,7 @@
 # turismo-argentino
 
 Prompt:
+
 Crea un proyecto web sobre "Turismo en Argentina".  
 Organiza los archivos en carpetas: css, js e img.  
 El sitio debe ser responsive, diseñado con flexbox y tener menú hamburguesa en móviles.  
