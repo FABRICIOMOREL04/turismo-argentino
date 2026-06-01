@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Argentina | Turismo en Argentina</title>
+    <meta name="description"
+        content="Conocé la cultura argentina: tango, gastronomía, mate y tradiciones regionales. Información histórica y social.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <style>
+        .cultura-articulo {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .cultura-articulo:last-child {
+            margin-bottom: 0;
+        }
+
+        .cultura-hero {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px var(--sombra);
+        }
+
+        .cultura-articulo h2 {
+            font-size: 2.2rem;
+            color: var(--gris-oscuro);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .cultura-articulo h3 {
+            font-size: 1.3rem;
+            color: var(--gris-oscuro);
+            margin: 35px 0 15px;
+            padding-left: 15px;
+            border-left: 4px solid var(--dorado-sol);
+        }
+
+        .cultura-articulo p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .cultura-articulo blockquote {
+            border-left: 4px solid var(--celeste-argentina);
+            padding: 20px 25px;
+            margin: 30px 0;
+            background: var(--gris-claro);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .cultura-articulo blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--gris-oscuro);
+            font-size: 0.95rem;
+        }
+
+        .cultura-articulo ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .cultura-articulo ul li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cultura-articulo ul li::marker {
+            color: var(--dorado-sol);
+        }
+
+        .cultura-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .cultura-galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .cultura-galeria img:hover {
+            transform: scale(1.03);
+        }
+
+        .divider {
+            max-width: 100px;
+            height: 3px;
+            background: var(--dorado-sol);
+            border-radius: 2px;
+            margin: 0 auto 50px;
+        }
+
+        @media (max-width: 768px) {
+            .cultura-hero {
+                height: 250px;
+            }
+
+            .cultura-articulo h2 {
+                font-size: 1.6rem;
+            }
+
+            .cultura-articulo p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-sun"></i>
+                <span>Turismo Argentina</span>
+            </a>
+            <button class="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-submenu">
+                    <a href="destinos.html">Destinos</a>
+                    <ul class="submenu">
+                        <li><a href="destinos.html#patagonia">Patagonia</a></li>
+                        <li><a href="destinos.html#litoral">Litoral</a></li>
+                        <li><a href="destinos.html#cuyo">Cuyo</a></li>
+                        <li><a href="destinos.html#norte">Norte Argentino</a></li>
+                        <li><a href="destinos.html#buenosaires">Buenos Aires</a></li>
+                    </ul>
+                </li>
+                <li><a href="cultura.html" class="active">Cultura</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="margin-top: 70px;">
+        <section
+            style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover; padding: 100px 20px; text-align: center; color: white;">
+            <h1 style="font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Cultura Argentina</h1>
+            <p
+                style="font-size: 1.2rem; max-width: 600px; margin: 20px auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                Tradiciones, identidad y expresiones de un país diverso</p>
+        </section>
+
+        <!-- TANGO -->
+        <article class="cultura-articulo" style="margin-top: 80px;">
+            <img src="img/tango.jpg" alt="Tango Argentino" class="cultura-hero">
+
+            <h2>El Tango: Patrimonio de la Humanidad</h2>
+
+            <p>El tango nació a fines del siglo XIX en los barrios portuarios de Buenos Aires y Montevideo, fruto del
+                encuentro de inmigrantes europeos, esclavos africanos y gauchos criollos. En sus orígenes fue marginal:
+                se bailaba en corrales, burdeles y patios de conventillos, y fue rechazado por las clases altas porteñas
+                que lo consideraban vulgar.</p>
+
+            <p>La "Guardia Vieja" (1880-1920) estableció las bases musicales con bandoneón, violín, piano y contrabajo.
+                La "Guardia Nueva" (1920-1955) elevó el tango a expresión artística sofisticada con compositores como
+                Carlos Gardel, Aníbal Troilo y Astor Piazzolla. En 2009, la UNESCO declaró el tango Patrimonio Cultural
+                Inmaterial de la Humanidad.</p>
+
+            <blockquote>
+                "El tango es un pensamiento triste que se baila."
+                <cite>— Enrique Santos Discépolo, compositor argentino</cite>
+            </blockquote>
+
+            <h3>Características y Códigos</h3>
+            <ul>
+                <li><strong>La milonga:</strong> Espacio social donde se baila tango. Existen códigos no escritos: la
+                    mirada ("cabeceo") reemplaza a la palabra para invitar a bailar, el abrazo es cerrado, y la pista se
+                    recorre en líneas circulares.</li>
+                <li><strong>El bandoneón:</strong> Instrumento de origen alemán (similar al acordeón) que se convirtió
+                    en el alma del tango. Su sonido melancólico define la identidad del género.</li>
+                <li><strong>La letra:</strong> El lunfardo (jerga porteña) y temas de desamor, barrios y nostalgia son
+                    centrales. Letristas como Homero Manzi y Enrique Santos Discépolo crearon poesía urbana.</li>
+                <li><strong>El tango electrónico:</strong> Desde los años 2000, proyectos como Bajofondo y Gotan Project
+                    fusionaron el tango con música electrónica, alcanzando audiencias globales.</li>
+            </ul>
+
+            <p>Hoy, Buenos Aires cuenta con más de 100 milongas activas. Barrios como San Telmo, La Boca y Boedo son
+                cuna de orquestas típicas. El Mundial de Tango, organizado anualmente por el Gobierno de la Ciudad,
+                reúne a bailarines de 40 países.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- GASTRONOMÍA -->
+        <article class="cultura-articulo">
+            <img src="img/asado1.jpg" alt="Asado Argentino" class="cultura-hero">
+
+            <h2>Gastronomía: Raíces Criollas e Inmigratorias</h2>
+
+            <p>La cocina argentina es un mosaico de tradiciones indígenas, criollas e inmigratorias. La llegada de
+                millones de europeos (italianos, españoles, alemanes, vascos, árabes, judíos) entre 1850 y 1950
+                transformó radicalmente los hábitos alimentarios, fusionándose con las costumbres gauchas y nativas.</p>
+
+            <p>El asado no es simplemente una comida: es un ritual social que puede durar de 4 a 8 horas. El "asador" o
+                "parrillero" es una figura respetada que domina el fuego con precisión. Las carnes más valoradas son el
+                vacío (flank steak), la entraña (skirt steak), el bife de chorizo (sirloin) y el costillar (ribs). La
+                parrilla a leña o carbón de quebracho es el método tradicional.</p>
+
+            <h3>Platos Emblemáticos</h3>
+            <ul>
+                <li><strong>Empanadas:</strong> De origen español, cada región tiene su versión: salteñas (picantes, con
+                    patita), tucumanas (con cebolla y huevo duro), jujeñas (con ají y papa), mendocinas (con aceituna y
+                    huevo), santiagueñas (dulces de queso y cebolla).</li>
+                <li><strong>Milanesa:</strong> Adaptación del Wiener Schnitzel austríaco. Se sirve "a la napolitana"
+                    (con salsa de tomate, jamón y queso gratinado), inventada en Buenos Aires en los años 40.</li>
+                <li><strong>Locro:</strong> Guiso de origen prehispánico a base de maíz blanco, zapallo, porotos,
+                    cebolla, ajo y carne de cerdo o vaca. Plato nacional del 25 de mayo (Día de la Patria).</li>
+                <li><strong>Dulce de leche:</strong> Inventado localmente en el siglo XIX (según la leyenda, por
+                    accidente en una estancia de Cañuelas). Es el ingrediente estrella de alfajores, facturas y postres.
+                </li>
+                <li><strong>Helado artesanal:</strong> La tradición italiana del gelato se adaptó al gusto local. Buenos
+                    Aires tiene más heladerías per cápita que cualquier ciudad del mundo excepto Italia.</li>
+            </ul>
+
+            <div class="cultura-galeria">
+                <img src="img/asado.jpg">
+                <img src="img/empanadas.jpg" alt="Empanadas">
+                <img src="img/vino.jpg" alt="Vinos">
+            </div>
+
+            <p>La escena gastronómica contemporánea incluye restaurantes de autor reconocidos internacionalmente, como
+                Don Julio (Buenos Aires), que figura entre los 50 mejores del mundo. La cocina de autor fusiona técnicas
+                francesas con ingredientes nativos como el merkén, la quinoa, la carne de llama y los hongos de la
+                Patagonia.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- MATE -->
+        <article class="cultura-articulo">
+            <img src="img/mate.jpg" alt="Mate Argentino" class="cultura-hero">
+
+            <h2>El Mate: Rito de Hospitalidad</h2>
+
+            <p>El mate es una infusión preparada con hojas de yerba mate (Ilex paraguariensis), planta nativa de la
+                cuenca del Alto Paraná. Su consumo data de tiempos prehispánicos: los guaraníes lo llamaban "ka'a he'ẽ"
+                (agua de hierba) y lo utilizaban en ceremonias religiosas y médicas. Los jesuitas del siglo XVII fueron
+                los primeros en cultivarlo sistemáticamente.</p>
+
+            <p>La práctica del mate compartido es un acto de confianza e igualdad. La ronda se sienta en círculo, y el
+                "cebador" (quien prepara y sirve) es una figura de responsabilidad. Las reglas tácitas incluyen: no
+                decir "gracias" hasta que no se quiere más (pues implica dejar de tomar), no mover la bombilla (pues
+                tapa el filtro), y aceptar que el mate amargo es el auténtico.</p>
+
+            <h3>Elementos y Variantes</h3>
+            <ul>
+                <li><strong>El mate (recipiente):</strong> Tradicionalmente de calabaza seca ("porongo") con borde de
+                    plata o alpaca. También existen de madera, vidrio, silicona y cerámica.</li>
+                <li><strong>La bombilla:</strong> Pajita metálica con filtro en la base, generalmente de alpaca, plata o
+                    acero inoxidable. Su diseño evolucionó desde cañas de tacuara.</li>
+                <li><strong>El termo:</strong> Inventado en 1892 por el británico James Dewar, se popularizó en
+                    Argentina en la década de 1920. Es inseparable del mate en la vida cotidiana.</li>
+                <li><strong>Mate dulce vs. amargo:</strong> El debate nacional. El mate dulce se endulza con azúcar,
+                    miel o stevia. El amargo es el preferido por tradición, especialmente en el Litoral y Cuyo.</li>
+                <li><strong>Tereré:</strong> Variante fría con agua helada o jugos, popular en el Litoral y Paraguay
+                    durante el verano.</li>
+            </ul>
+
+            <blockquote>
+                "El mate es lo único que no se puede comprar con plata. Se pide con confianza, se toma en compañía, y se
+                devuelve con gratitud."
+                <cite>— Julio Cortázar, escritor argentino</cite>
+            </blockquote>
+
+            <p>Argentina es el mayor consumidor per cápita de yerba mate del mundo: cada argentino consume
+                aproximadamente 6,5 kg anuales. La yerba mate contiene mateína (análogo de la cafeína), polifenoles
+                antioxidantes y vitaminas del complejo B. Estudios científicos recientes han validado propiedades
+                cardioprotectoras y digestivas.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- TRADICIONES REGIONALES -->
+        <article class="cultura-articulo">
+            <img src="img/folklore.jpg" alt="Tradiciones Argentinas" class="cultura-hero">
+
+            <h2>Tradiciones Regionales: Diversidad Cultural</h2>
+
+            <p>Argentina es un país federal donde cada región preserva identidades distintivas forjadas por geografía,
+                historia y etnias. Desde el gaucho de la pampa hasta el coplero del norte, las tradiciones regionales
+                son patrimonio vivo.</p>
+
+            <h3>La Tradición Gaucha</h3>
+            <p>El gaucho es el símbolo nacional de Argentina, Uruguay y el sur de Brasil. Surge en el siglo XVII como
+                jinete nómada de la pampa, dueño de su caballo y su lazo. La literatura gauchesca —desde el "Martín
+                Fierro" de José Hernández hasta la obra de Ricardo Güiraldes— elevó esta figura a mito nacional.</p>
+
+            <ul>
+                <li><strong>Payada:</strong> Duelo poético improvisado al son de la guitarra. Los payadores compiten en
+                    versos octosílabos rimados sobre temas propuestos por el público.</li>
+                <li><strong>Jineteada:</strong> Deporte tradicional donde el jinete debe mantenerse sobre un potro sin
+                    montura ni frenos por 6 a 15 segundos. Es parte de las fiestas patronales en toda la región
+                    pampeana.</li>
+                <li><strong>Boleadoras:</strong> Arma de caza gaucha compuesta por tres bolas de piedra o plomo unidas
+                    por tientos de cuero. Hoy se usa en danzas folclóricas.</li>
+            </ul>
+
+            <h3>Cultura Andina del NOA</h3>
+            <p>En el noroeste, las tradiciones diaguitas, atacameñas y quechuas perviven en la cosmovisión andina. La
+                Pachamama (Madre Tierra) es celebrada en agosto con ofrendas de comida, bebida y hojas de coca. El
+                carnaval en la Quebrada de Humahuaca incluye "diablos" que bailan al son de erkes, anatas y cajas,
+                representando la fertilidad de la tierra.</p>
+
+            <ul>
+                <li><strong>Carnaval del Norte:</strong> En Jujuy, Salta y Catamarca, el carnaval tiene raíces
+                    prehispánicas. Las comparsas de diablos bailan durante 9 días, culminando en el "entierro del
+                    diablo".</li>
+                <li><strong>Artesanía textil:</strong> Los tejidos en telar horizontal ("telar de cintura") producen
+                    ponchos, aguayos y chullos con motivos geométricos de significado ritual. La lana de llama, alpaca y
+                    oveja es teñida con tintes naturales de cochinilla, nogal y ch'illka.</li>
+                <li><strong>Música andina:</strong> Instrumentos como la quena, el siku, el charango y el bombo legüero
+                    acompañan festividades y rituales. Los grupos folclóricos del NOA son reconocidos
+                    internacionalmente.</li>
+            </ul>
+
+            <h3>Folclore y Música Nacional</h3>
+            <p>La música folclórica argentina abarca ritmos como el chacarera, zamba, gato, escondido, malambo y
+                chamamé. La "Ley de Música Argentina" (2015) establece que el 30% de la música difundida en medios debe
+                ser de autores argentinos, incluyendo folclore.</p>
+
+            <p>La zamba (no confundir con la samba brasileña) es el ritmo nacional por excelencia. Se baila en pareja
+                con pañuelo, con movimientos lentos y cadenciosos. La chacarera, originaria de Santiago del Estero, es
+                más rápida y se baila en grupos de cuatro. El chamamé, del Litoral, tiene influencia guaraní y se baila
+                pegado.</p>
+
+            <p>El Festival Nacional de Folclore de Cosquín (Córdoba), realizado desde 1961, es el evento folclórico más
+                importante de Latinoamérica. Durante 9 noches de enero, el Anfiteatro de la Plaza Próspero Molina recibe
+                a 150.000 espectadores por noche.</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-sun"></i> Turismo Argentina</h3>
+                <p>Información turística de Argentina. Conocé nuestro país.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Seguinos</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://wa.me/5490000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> Turismo Argentina. Sitio informativo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

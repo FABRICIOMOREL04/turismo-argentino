@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Turismo en Argentina</title>
+    <meta name="description"
+        content="Contacto del sitio informativo Turismo en Argentina. Envianos tus consultas o sugerencias.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <style>
+        .contacto-simple {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contacto-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contacto-info h2 {
+            font-size: 2rem;
+            color: var(--gris-oscuro);
+            margin-bottom: 15px;
+        }
+
+        .contacto-info p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .contacto-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--celeste-argentina), var(--celeste-oscuro));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .contacto-form {
+            background: var(--blanco);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px var(--sombra);
+        }
+
+        .form-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            display: none;
+            border-left: 4px solid var(--verde-naturaleza);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gris-oscuro);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--celeste-argentina);
+            background: var(--blanco);
+            box-shadow: 0 0 0 4px rgba(117, 170, 219, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: #e74c3c;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        .contacto-nota {
+            margin-top: 40px;
+            padding: 25px 30px;
+            background: var(--gris-claro);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contacto-nota p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .contacto-nota i {
+            color: var(--celeste-argentina);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contacto-form {
+                padding: 25px;
+            }
+
+            .contacto-info h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-sun"></i>
+                <span>Turismo Argentina</span>
+            </a>
+            <button class="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-submenu">
+                    <a href="destinos.html">Destinos</a>
+                    <ul class="submenu">
+                        <li><a href="destinos.html#patagonia">Patagonia</a></li>
+                        <li><a href="destinos.html#litoral">Litoral</a></li>
+                        <li><a href="destinos.html#cuyo">Cuyo</a></li>
+                        <li><a href="destinos.html#norte">Norte Argentino</a></li>
+                        <li><a href="destinos.html#buenosaires">Buenos Aires</a></li>
+                    </ul>
+                </li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="margin-top: 70px;">
+        <section
+            style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover; padding: 100px 20px; text-align: center; color: white;">
+            <h1 style="font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Contacto</h1>
+            <p
+                style="font-size: 1.2rem; max-width: 600px; margin: 20px auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                Tu opinión nos ayuda a mejorar este sitio informativo</p>
+        </section>
+
+        <section class="section">
+            <div class="contacto-simple">
+                <div class="contacto-info">
+                    <div class="contacto-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h2>Escribinos</h2>
+                    <p>Este es un sitio informativo sin fines de lucro. Si tenés alguna consulta, sugerencia, corrección
+                        o simplemente querés compartir tu experiencia viajando por Argentina, dejanos tu mensaje.</p>
+                </div>
+
+                <div class="contacto-form">
+                    <div class="form-success">
+                        <i class="fas fa-check-circle"></i> ¡Mensaje enviado! Gracias por contactarnos.
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            <span class="error-message">Ingresá tu nombre (mínimo 3 caracteres)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            <span class="error-message">Ingresá un email válido</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje"
+                                placeholder="Contanos qué te pareció el sitio, si encontraste algún error, o si tenés alguna sugerencia para agregar..."
+                                required></textarea>
+                            <span class="error-message">El mensaje debe tener al menos 10 caracteres</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contacto-nota">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Nota importante:</strong> Este sitio es de carácter informativo y no comercial. No
+                        vendemos paquetes turísticos ni realizamos reservas. Para información sobre trámites
+                        migratorios, consultá la <a href="https://www.argentina.gob.ar" target="_blank"
+                            style="color: var(--celeste-argentina); text-decoration: underline;">página oficial del
+                            Estado argentino</a>. Para turismo receptivo, recomendamos contactar directamente a las
+                        oficinas de turismo de cada provincia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-sun"></i> Turismo Argentina</h3>
+                <p>Información turística de Argentina. Conocé nuestro país.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Seguinos</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://wa.me/5490000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> Turismo Argentina. Sitio informativo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

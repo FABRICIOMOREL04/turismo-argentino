@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos Turísticos | Turismo en Argentina</title>
+    <meta name="description"
+        content="Guía informativa de los principales destinos turísticos de Argentina: Patagonia, Cataratas, Mendoza, Buenos Aires y el Norte Argentino.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <style>
+        /* Estilos específicos para destinos - layout editorial */
+        .destino-articulo {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .destino-articulo:last-child {
+            margin-bottom: 0;
+        }
+
+        .destino-hero {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px var(--sombra);
+        }
+
+        .destino-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .destino-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .destino-meta i {
+            color: var(--celeste-argentina);
+        }
+
+        .destino-articulo h2 {
+            font-size: 2.2rem;
+            color: var(--gris-oscuro);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .destino-articulo h3 {
+            font-size: 1.3rem;
+            color: var(--gris-oscuro);
+            margin: 35px 0 15px;
+            padding-left: 15px;
+            border-left: 4px solid var(--celeste-argentina);
+        }
+
+        .destino-articulo p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .destino-articulo ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .destino-articulo ul li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .destino-articulo ul li::marker {
+            color: var(--celeste-argentina);
+        }
+
+        .datos-destino {
+            background: var(--gris-claro);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .dato-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .dato-item i {
+            color: var(--celeste-argentina);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .dato-item strong {
+            display: block;
+            color: var(--gris-oscuro);
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .dato-item span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .divider {
+            max-width: 100px;
+            height: 3px;
+            background: var(--celeste-argentina);
+            border-radius: 2px;
+            margin: 0 auto 50px;
+        }
+
+        @media (max-width: 768px) {
+            .destino-hero {
+                height: 250px;
+            }
+
+            .destino-articulo h2 {
+                font-size: 1.6rem;
+            }
+
+            .destino-articulo p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-sun"></i>
+                <span>Turismo Argentina</span>
+            </a>
+            <button class="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-submenu">
+                    <a href="destinos.html" class="active">Destinos</a>
+                    <ul class="submenu">
+                        <li><a href="#patagonia">Patagonia</a></li>
+                        <li><a href="#litoral">Litoral</a></li>
+                        <li><a href="#cuyo">Cuyo</a></li>
+                        <li><a href="#norte">Norte Argentino</a></li>
+                        <li><a href="#buenosaires">Buenos Aires</a></li>
+                    </ul>
+                </li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="margin-top: 70px;">
+        <section
+            style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover; padding: 100px 20px; text-align: center; color: white;">
+            <h1 style="font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Destinos Turísticos</h1>
+            <p
+                style="font-size: 1.2rem; max-width: 600px; margin: 20px auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                Guía informativa para conocer la geografía y los atractivos de cada región</p>
+        </section>
+
+        <!-- PATAGONIA -->
+        <article id="patagonia" class="destino-articulo" style="margin-top: 80px;">
+            <img src="img/glaciar.jpg" alt="Glaciar Perito Moreno" class="destino-hero">
+
+            <div class="destino-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Santa Cruz, Río Negro, Chubut, Neuquén, Tierra del
+                    Fuego</span>
+                <span><i class="fas fa-temperature-half"></i> -2°C a 15°C (invierno); 5°C a 22°C (verano)</span>
+                <span><i class="fas fa-calendar"></i> Todo el año</span>
+            </div>
+
+            <h2>Patagonia: El Fin del Mundo</h2>
+
+            <p>La Patagonia argentina abarca más de 900.000 km² en el extremo sur del continente americano. Se divide en
+                Patagonia Andina —con montañas, lagos y glaciares— y Patagonia Extraandina —con estepas, mesetas y
+                costas atlánticas—. Esta región alberga algunos de los paisajes más espectaculares del planeta, producto
+                de la orogenia andina y las glaciaciones cuaternarias.</p>
+
+            <p>El Parque Nacional Los Glaciares, en Santa Cruz, protege 47 glaciares de la Cordillera de los Andes,
+                incluyendo el Perito Moreno, uno de los pocos glaciares del mundo en estado de equilibrio. Su frente de
+                5 km de ancho y 70 m de altura sobre el lago Argentino ofrece desprendimientos de hielo que pueden
+                observarse desde pasarelas a solo 300 metros de distancia.</p>
+
+            <h3>Principales Atractivos</h3>
+            <ul>
+                <li><strong>Glaciar Perito Moreno:</strong> Único en el mundo por su accesibilidad y estado de
+                    equilibrio. Actividades: minitrekking con crampones, navegación, safari fotográfico.</li>
+                <li><strong>San Carlos de Bariloche:</strong> Centro turístico histórico fundado en 1902. El Cerro
+                    Catedral es el centro de ski más grande de Sudamérica con 120 km de pistas.</li>
+                <li><strong>Ushuaia:</strong> Ciudad más austral del mundo (54°48'S). Base para cruceros a la Antártida
+                    y punto de inicio de la Ruta Nacional 3.</li>
+                <li><strong>Península Valdés:</strong> Reserva Natural declarada Patrimonio de la Humanidad. Avistaje de
+                    ballenas francas australes (junio a diciembre), orcas, pingüinos y elefantes marinos.</li>
+                <li><strong>Parque Nacional Nahuel Huapi:</strong> El primer parque nacional de Argentina (1903). Lagos
+                    Nahuel Huapi, Moreno y Gutiérrez con aguas de color turquesa.</li>
+            </ul>
+
+            <div class="datos-destino">
+                <div class="dato-item">
+                    <i class="fas fa-ruler-combined"></i>
+                    <div>
+                        <strong>Extensión</strong>
+                        <span>~900.000 km²</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>Población</strong>
+                        <span>~2 millones de habitantes</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-tree"></i>
+                    <div>
+                        <strong>Parques Nacionales</strong>
+                        <span>12 (Los Glaciares, Nahuel Huapi, Tierra del Fuego, etc.)</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <strong>Patrimonios UNESCO</strong>
+                        <span>Los Glaciares, Cueva de las Manos, Península Valdés</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>La fauna patagónica incluye el guanaco, el cóndor andino, el puma, el huemul (ciervo nativo en peligro de
+                extinción) y el zorro colorado. En la costa atlántica, la colonia de pingüinos de Magallanes en Punta
+                Tombo es la más grande del continente fuera de la Antártida, con más de 800.000 ejemplares.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- LITORAL -->
+        <article id="litoral" class="destino-articulo">
+            <img src="img/cataratas-iguazu.jpg" alt="Cataratas del Iguazú" class="destino-hero">
+
+            <div class="destino-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Misiones, Corrientes, Entre Ríos, Formosa, Chaco</span>
+                <span><i class="fas fa-temperature-half"></i> 15°C a 35°C (subtropical húmedo)</span>
+                <span><i class="fas fa-calendar"></i> Marzo a noviembre (evitar calor extremo)</span>
+            </div>
+
+            <h2>Litoral: Selvas, Ríos y Biodiversidad</h2>
+
+            <p>La región del Litoral argentino se caracteriza por su clima subtropical húmedo, selvas en galería, ríos
+                caudalosos y una biodiversidad comparable a la del Amazonas. El bioma predominante es la Selva
+                Paranaense o Selva Misionera, que se extiende por el norte de Misiones y el este de Corrientes.</p>
+
+            <p>El río Paraná, con 4.880 km de longitud total, es el segundo más largo de Sudamérica después del
+                Amazonas. En su curso superior forma el límite natural entre Argentina y Paraguay, y alimenta los
+                Esteros del Iberá, el segundo humedal más grande del mundo después del Pantanal brasileño.</p>
+
+            <h3>Principales Atractivos</h3>
+            <ul>
+                <li><strong>Cataratas del Iguazú:</strong> 275 saltos de agua en una extensión de 2.700 metros. La
+                    Garganta del Diablo, con 80 metros de caída, concentra el 50% del caudal. El parque alberga 2.000
+                    especies de plantas vasculares y 400 especies de aves.</li>
+                <li><strong>Esteros del Iberá:</strong> Sistema de 13.000 km² de humedales. Avistaje de yacarés overos,
+                    carpinchos, lobos de río, ciervos de los pantanos y más de 350 especies de aves.</li>
+                <li><strong>Ruinas de San Ignacio Miní:</strong> Misión jesuítica guaraní fundada en 1610. Patrimonio de
+                    la Humanidad desde 1984. Conserva la arquitectura barroca hispano-guaraní.</li>
+                <li><strong>El Palmar:</strong> Parque Nacional en Entre Ríos que protege la palmera yatay, endémica de
+                    la región. Senderos entre palmares de hasta 10 metros de altura.</li>
+                <li><strong>Colón y Concordia:</strong> Ciudades termales a orillas del río Uruguay. Playas fluviales y
+                    balnearios con aguas termales medicinales.</li>
+            </ul>
+
+            <div class="datos-destino">
+                <div class="dato-item">
+                    <i class="fas fa-ruler-combined"></i>
+                    <div>
+                        <strong>Esteros del Iberá</strong>
+                        <span>13.000 km² de humedales</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-water"></i>
+                    <div>
+                        <strong>Cataratas del Iguazú</strong>
+                        <span>1.700 m³/s de caudal promedio</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-leaf"></i>
+                    <div>
+                        <strong>Biodiversidad</strong>
+                        <span>~50% de la flora vascular del país</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-hippo"></i>
+                    <div>
+                        <strong>Fauna emblemática</strong>
+                        <span>Yaguareté, tapir, yacaré, tucán</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>La cultura del Litoral está marcada por la influencia guaraní, visible en la toponimia (Iguazú = "agua
+                grande", Paraná = "pariente del mar"), la gastronomía (chipá, mbeyú, sopa paraguaya) y las tradiciones
+                artesanales. El mate es consumido desde tiempos prehispánicos por los pueblos guaraníes.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- CUYO -->
+        <article id="cuyo" class="destino-articulo">
+            <img src="img/mendoza.jpg" alt="Mendoza" class="destino-hero">
+
+            <div class="destino-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Mendoza, San Juan, San Luis</span>
+                <span><i class="fas fa-temperature-half"></i> 0°C a 18°C (invierno); 15°C a 35°C (verano)</span>
+                <span><i class="fas fa-calendar"></i> Marzo a mayo (vendimia); junio a septiembre (ski)</span>
+            </div>
+
+            <h2>Cuyo: Montañas, Desiertos y Vinos de Altura</h2>
+
+            <p>Cuyo es una región árida y montañosa ubicada al pie de la Cordillera de los Andes. Su nombre proviene del
+                araucano "cuyum" o "cuyu", que significa "tierra de desiertos". El clima es continental desértico, con
+                escasas precipitaciones (menos de 200 mm anuales) que se concentran en verano.</p>
+
+            <p>La provincia de Mendoza concentra el 70% de la producción vitivinícola argentina. La altitud de los
+                viñedos —entre 800 y 1.600 metros sobre el nivel del mar— genera amplitudes térmicas que favorecen la
+                concentración de azúcares y aromas en las uvas. El Malbec, cepa originaria de Cahors (Francia), encontró
+                en Mendoza su terroir ideal.</p>
+
+            <h3>Principales Atractivos</h3>
+            <ul>
+                <li><strong>Aconcagua (6.961 m):</strong> Montaña más alta de América y fuera del Sistema Himalaya. El
+                    Parque Provincial Aconcagua recibe montañistas de todo el mundo. El trekking base camp no requiere
+                    experiencia técnica.</li>
+                <li><strong>Ruta del Vino:</strong> 3 circuitos turísticos (Alto Valle del Río Mendoza, Valle de Uco,
+                    San Rafael) con más de 1.500 bodegas. La Fiesta Nacional de la Vendimia se celebra en marzo.</li>
+                <li><strong>Ischigualasto:</strong> "Valle de la Luna" en San Juan. Formaciones geológicas de 200
+                    millones de años. Patrimonio de la Humanidad junto con Talampaya.</li>
+                <li><strong>Talampaya:</strong> Cañón de 150 metros de altura en La Rioja (aunque geográficamente
+                    cercano a Cuyo). Pinturas rupestres de pueblos diaguitas.</li>
+                <li><strong>Las Leñas:</strong> Centro de ski con 29.500 hectáskisables y la mejor nieve en polvo del
+                    país. Temporada: junio a octubre.</li>
+            </ul>
+
+            <div class="datos-destino">
+                <div class="dato-item">
+                    <i class="fas fa-wine-glass"></i>
+                    <div>
+                        <strong>Producción vitivinícola</strong>
+                        <span>~1.500 bodegas en Mendoza</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-mountain"></i>
+                    <div>
+                        <strong>Aconcagua</strong>
+                        <span>6.961 msnm - cumbre más alta de América</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-sun"></i>
+                    <div>
+                        <strong>Días de sol</strong>
+                        <span>~320 días soleados por año</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-droplet"></i>
+                    <div>
+                        <strong>Riego</strong>
+                        <span>Sistema de canales prehispánico (acequias)</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>La gastronomía cuyana destaca por el chivito al asador (cabrito), la trucha de los ríos de montaña, y las
+                aceitunas y aceite de oliva de San Juan. El tradicional "chivo al disco" es una preparación campera que
+                se cocina lentamente en discos de arado.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- NORTE -->
+        <article id="norte" class="destino-articulo">
+            <img src="img/quebrada-humahuaca.jpg" alt="Quebrada de Humahuaca" class="destino-hero">
+
+            <div class="destino-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Jujuy, Salta, Tucumán, Catamarca, Santiago del Estero, La
+                    Rioja</span>
+                <span><i class="fas fa-temperature-half"></i> 10°C a 28°C (verano); -5°C a 18°C (invierno en
+                    altura)</span>
+                <span><i class="fas fa-calendar"></i> Abril a octubre (evitar lluvias de verano)</span>
+            </div>
+
+            <h2>Norte Argentino: Puna, Quebradas y Tradición Andina</h2>
+
+            <p>El Noroeste Argentino (NOA) es una región de alta montaña, valles encajonados y la Puna, un altiplano
+                árido que se extiende por Jujuy, Salta y Catamarca. La geología expone formaciones de hasta 600 millones
+                de años, con colores que van desde el rojo óxido hasta el verde cobre, producto de la mineralización.
+            </p>
+
+            <p>La Quebrada de Humahuaca, declarada Patrimonio Cultural de la Humanidad en 2003, es un corredor de 155 km
+                que fue camino principal del Imperio Inca (Qhapaq Ñan). Pueblos como Purmamarca, Tilcara, Humahuaca y
+                Iruya conservan arquitectura colonial y tradiciones indígenas que datan de tiempos prehispánicos.</p>
+
+            <h3>Principales Atractivos</h3>
+            <ul>
+                <li><strong>Quebrada de Humahuaca:</strong> 155 km de formaciones geológicas multicolores. El Cerro de
+                    los Siete Colores en Purmamarca es el emblema de la región.</li>
+                <li><strong>Salinas Grandes:</strong> Salar de 212 km² a 3.450 msnm. Tercer salar más grande del mundo.
+                    La superficie de sal blanca crea efectos ópticos únicos.</li>
+                <li><strong>Cafayate y Quebrada de las Conchas:</strong> Formaciones geológicas como el Anfiteatro, la
+                    Garganta del Diablo y los Castillos. Viñedos a 1.700 msnm producen el Torrontés, vino blanco
+                    aromático emblemático.</li>
+                <li><strong>Tren a las Nubes:</strong> Ferrocarril construido en 1921 a 4.220 msnm. Cruza la La
+                    Polvorilla, viaducto de 224 metros de longitud y 64 de altura.</li>
+                <li><strong>Cueva de las Manos:</strong> En Santa Cruz (aunque culturalmente vinculada al sur del NOA).
+                    Pinturas rupestres de 9.000 años de antigüedad. Patrimonio de la Humanidad.</li>
+            </ul>
+
+            <div class="datos-destino">
+                <div class="dato-item">
+                    <i class="fas fa-mountain"></i>
+                    <div>
+                        <strong>Altura máxima</strong>
+                        <span>6.739 msnm (Nevado de Chañi)</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-palette"></i>
+                    <div>
+                        <strong>Quebrada de Humahuaca</strong>
+                        <span>155 km de patrimonio cultural</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-train"></i>
+                    <div>
+                        <strong>Tren a las Nubes</strong>
+                        <span>4.220 msnm - ruta más alta de América</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-wine-bottle"></i>
+                    <div>
+                        <strong>Torrontés</strong>
+                        <span>Cepa nativa argentina de altura</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>La cultura andina del NOA se manifiesta en las celebraciones de la Pachamama (agosto), el carnaval con
+                diablos bailando (Humahuaca), y la artesanía en tejidos de lana de llama y alpaca. La gastronomía
+                incluye el locro (guiso de maíz y zapallo), las empanadas salteñas (horno de barro), y el chicharrón de
+                cerdo.</p>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- BUENOS AIRES -->
+        <article id="buenosaires" class="destino-articulo">
+            <img src="img/buenos-aires.jpg" alt="Buenos Aires" class="destino-hero">
+
+            <div class="destino-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Ciudad Autónoma de Buenos Aires y Gran Buenos Aires</span>
+                <span><i class="fas fa-temperature-half"></i> 8°C a 17°C (invierno); 18°C a 30°C (verano)</span>
+                <span><i class="fas fa-calendar"></i> Todo el año (primavera y otoño ideales)</span>
+            </div>
+
+            <h2>Buenos Aires: Historia, Arquitectura y Cultura Urbana</h2>
+
+            <p>Fundada en 1536 y refundada en 1580, Buenos Aires es la capital política y cultural de Argentina. Con 48
+                barrios oficiales y una población de 3 millones en la ciudad y 15 millones en el Gran Buenos Aires, es
+                una de las metrópolis más grandes de Latinoamérica. Su arquitectura refleja oleadas inmigratorias
+                italianas, españolas, francesas y británicas.</p>
+
+            <p>La ciudad se desarrolló alrededor del Puerto de Buenos Aires, que hasta mediados del siglo XX concentraba
+                el comercio exterior argentino. Barrios como La Boca, San Telmo y Puerto Madero fueron directamente
+                moldeados por esta actividad portuaria. Hoy, Buenos Aires es el centro financiero, editorial, teatral y
+                gastronómico del país.</p>
+
+            <h3>Principales Atractivos</h3>
+            <ul>
+                <li><strong>Teatro Colón:</strong> Inaugurado en 1908, es considerado uno de los cinco mejores teatros
+                    de ópera del mundo por su acústica. Arquitectura ecléctica con influencias renacentista, barroca y
+                    griega.</li>
+                <li><strong>San Telmo y La Boca:</strong> San Telmo conserva casas de fines del siglo XIX y la feria de
+                    antigüedades más grande de Latinoamérica (domingos). La Boca es cuna del tango y del Club Atlético
+                    Boca Juniors.</li>
+                <li><strong>Recoleta:</strong> Barrio de arquitectura francesa con el Cementerio de la Recoleta, donde
+                    descansan Eva Perón, Adolfo Bioy Casares y otras figuras históricas. El Museo Nacional de Bellas
+                    Artes alberga la colección más importante de arte argentino.</li>
+                <li><strong>Avenida 9 de Julio:</strong> Con 140 metros de ancho, es la avenida más ancha del mundo. El
+                    Obelisco (1936) conmemora el cuarto centenario de la fundación de la ciudad.</li>
+                <li><strong>Reserva Ecológica Costanera Sur:</strong> 350 hectáreas de humedales recuperados en Puerto
+                    Madero. Más de 300 especies de aves y el único humedal natural dentro de una ciudad de
+                    Latinoamérica.</li>
+            </ul>
+
+            <div class="datos-destino">
+                <div class="dato-item">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <strong>Población</strong>
+                        <span>~3 millones (CABA); ~15 millones (GBA)</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-theater-masks"></i>
+                    <div>
+                        <strong>Teatros</strong>
+                        <span>Más de 300 salas teatrales activas</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-book"></i>
+                    <div>
+                        <strong>Librerías</strong>
+                        <span>~750 librerías (más librerías per cápita del mundo)</span>
+                    </div>
+                </div>
+                <div class="dato-item">
+                    <i class="fas fa-utensils"></i>
+                    <div>
+                        <strong>Gastronomía</strong>
+                        <span>~4.000 restaurantes y bares</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Buenos Aires es la ciudad con más librerías per cápita del mundo según la UNESCO, y la que más cafés
+                literarios conserva. El subte (metro), inaugurado en 1913, fue el primero de Latinoamérica, el
+                hemisferio sur y el mundo de habla hispana. La vida cultural incluye más de 100 museos, 300 teatros y
+                una escena de música independiente reconocida internacionalmente.</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-sun"></i> Turismo Argentina</h3>
+                <p>Información turística de Argentina. Conocé nuestro país.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Seguinos</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://wa.me/5490000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> Turismo Argentina. Sitio informativo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
